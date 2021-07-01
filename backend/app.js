@@ -1,8 +1,8 @@
-const express = require('express');
-const cors = require('cors');
-const dotenv = require('dotenv');
+const express = require("express");
+const cors = require("cors");
+const dotenv = require("dotenv");
 
-const userRouter = require('./routes/userRoute');
+const userRouter = require("./routes/userRoute");
 
 dotenv.config();
 
@@ -16,8 +16,11 @@ app.use(cors());
     res.send('Up and running');
 }) */
 
-app.use('/api/v1/', userRouter);
+app.use("/api/v1/", userRouter);
 
+app.use("/", (req, res) => {
+  res.send("Up and running");
+});
 app.listen(PORT, () => {
-    console.log(`Listening on localhost:${PORT}`);
-})
+  console.log(`Listening on localhost:${PORT}`);
+});

@@ -13,3 +13,4 @@ To use the API, ensure that the fpollowing are installed and setup for use
 The API can be accessed using a local server or via the heroku app. The endpoints to access the APIS are listed below
 * Get all users - GET /api/v1/users/
 * Create new user - POST /api/v1/users/createusers/
+* Login - POST /api/v1/users/login/
